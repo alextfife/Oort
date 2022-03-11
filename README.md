@@ -14,4 +14,14 @@ This was more than 10 years ago, but who doesnt like to see where we began?
 
 # Design
 - I had most of the creative control of the site, and I was hugely inspired by iOS 7. 
-- The web app was a huge thing for me because most of our peers and ourselves had smartphones so I beleive having mobile and dynamic views was extremely important. 
+
+# Screenshots
+
+Home page (elements under the banner picture were hoverable. I was very insistent in using CSS float and not making users scroll for information)
+![image](https://user-images.githubusercontent.com/26822309/157827832-0ab14553-da30-4866-850b-e65988dc0d2f.png)
+
+Developers page: gotta let everyone know who did it! 
+![image](https://user-images.githubusercontent.com/26822309/157827947-a513330e-0f3d-4ce8-bc7d-6db289ab2278.png)
+
+'App' page - The web app was a huge thing for me because most of our peers and ourselves had smartphones so I believe having mobile and dynamic views was extremely important. 
+![image](https://user-images.githubusercontent.com/26822309/157828002-b587a1f1-56d3-46ae-8d84-172939f72b38.png)
