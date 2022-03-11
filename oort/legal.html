@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Legal</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=10;">
+<link media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="retina.css" type="text/css" rel="stylesheet">	
+<style>
+/*CSS for "legal.html"*/
+
+	body, html {
+		background-color:#949494 ;
+		font-family: "Times New roman",Calbri;
+		text-align:center;
+		}
+	  
+
+
+#page {
+	background-color:white;
+	box-shadow: 10px 10px 5px #000000;
+	text-align:left;
+	}
+
+
+
+
+
+
+
+
+</style>
+<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="apple-touch-startup-image" href="startup.png">
+<script>
+
+document.addEventListener("offline", function(){ alert("You are offline. Leaving this page without being connected by WiFi or cellular data will lose this data until you reconnect.") }, false);
+
+var d = new Date();
+var day = d.getDate();
+var month = d.getMonth();
+var year = d.getFullYear();
+var realMonth = month + 1;
+
+
+function loadDate() {
+document.getElementById("day").innerHTML = day;
+document.getElementById("year").innerHTML = year;
+
+if (realMonth == 1) {
+document.getElementById("month").innerHTML= "January ";
+}
+if (realMonth == 2) {
+document.getElementById("month").innerHTML= "February ";
+}
+if (realMonth == 3) {
+document.getElementById("month").innerHTML= "March ";
+}
+if (realMonth == 4) {
+document.getElementById("month").innerHTML= "April ";
+}
+if (realMonth == 5) {
+document.getElementById("month").innerHTML= "May ";
+}
+if (realMonth == 6) {
+document.getElementById("month").innerHTML= "June ";
+}
+if (realMonth == 7) {
+document.getElementById("month").innerHTML= "July ";
+}
+if (realMonth == 8) {
+document.getElementById("month").innerHTML= "August ";
+}
+if (realMonth == 9) {
+document.getElementById("month").innerHTML= "Semptember ";
+}
+if (realMonth == 10) {
+document.getElementById("month").innerHTML= "October ";
+}
+if (realMonth == 11) {
+document.getElementById("month").innerHTML= "November ";
+}
+if (realMonth == 12) {
+document.getElementById("month").innerHTML= "December ";
+}
+}
+
+
+// Mobile Safari in standalone mode
+if(("standalone" in window.navigator) && window.navigator.standalone){
+ 
+	// If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true
+	var noddy, remotes = false;
+	
+	document.addEventListener('click', function(event) {
+		
+		noddy = event.target;
+		
+		// Bubble up until we hit link or top HTML element. Warning: BODY element is not compulsory so better to stop on HTML
+		while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+	        noddy = noddy.parentNode;
+	    }
+		
+		if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+		{
+			event.preventDefault();
+			document.location.href = noddy.href;
+		}
+	
+	},false);
+}
+
+
+
+ 
+var PANEL_SPEED = 650,
+   PANEL_EASING = 'cubic-bezier(0.23,1,0.32,1)'
+ 
+$('#panel_to_slide_out').animate({ 
+  translateX: '-50%', opacity: 1 }, PANEL_SPEED, PANEL_EASING)
+$('#panel_to_slide_in').animate({ 
+  translateX: '0%', opacity: 1 }, PANEL_SPEED, PANEL_EASING)
+
+
+$(window).on('online', online)
+$(window).on('offline', offline)
+
+</script>
+</head>
+
+<body onload="loadDate(), lastMod()">
+<div id="wrapper">
+<div id="head">
+<h1><span>
+<span><div id="menu">Legal information</h1>
+</span></div></div></span>
+<div id="nav"><div id="footers">
+<a class="nav" href="index.html">Home</a> &nbsp &nbsp &nbsp<a class="nav" href="contact.html">Developers </a> &nbsp &nbsp &nbsp<a class="nav" href="mobileapp.html">App</a>
+</div></div>
+<br/><br/>
+<h3 style="text-align:center;">This page includes legal information about and concerning our website (oort.webs.com)</h3>
+<div id="page">
+<!--start writing here-->
+<h1 style="text-align:center;">Legal</h1>
+<h1>Affiliates </h1>
+<p>We are not affiliated, payed, endorsed, controled, leasing rights to, or in partnership of any kind whatsoever with Northwest Florida State College, Collegaite High School, or Okaloosa School District.
+ We are not affiliated with any outside group or organization. The <b>only</b> persons who control the site are 
+ <ul>
+	<li>Nathan Smith (who is the holder of our server)</li>
+	<li>Thomas Anchor</li>
+	<li>and Alex Fife</li>
+</ul>
+We three control the site content, images, and other media as well as the source code used within the site.</p>
+<h1>Ownership</h1>
+<p>The three of us have contributed our talents into this project about 50, 50 and 50. In simpler terms, we share ownership in the source code equally. 
+Although we share ownership, each of us is responsible for a different part of the site.
+Nathan does javascripting and technical stuff, Thomas does content checking and user interface guidlines, as well as content, and Alex does the over all look, representation, and feel of the site, along with daily* updates to the site and content modifications. 
+Technologies that were not originally ours are used, but only since the source indicated that you can use it.
+Screenshots are ours, however, other images are not, and belog to there respective owners.</p>
+<h1>Copyright</h1>
+<p>As mentioned previously, we share ownership of the site, which also includes copyright. What is covered by the copyright is the styling and the format the site has. 
+Also, if we would like to use technology already developed on this site, we can use it and modify it elsewhere.</p>
+<h1>Representation</h1>
+<p>No, we are not a company. No, we are not a non-profit organization. We do not have to worry about "employee" comments, actions, or thoughts on anything on other media. An exception does occur where a member of the group posts something not endorsed by the team individually. If one of the three of us posts something offensive or controversial to another user, in the comments, in the page, or by any other media hosted on the server, it will not be toloerated.</p>
+<h1>Finance</h1>
+<p>We, nor the server hosting the site, or anyone, gets a profit off of this site. No one or thing gets a profit. Think of it as free information.</p>
+
+
+<!--stop here-->
+</div>
+<div id="footer">
+<p style="text-align:center;">Designed by Thomas A, Alex F, and Nathan S.<a href="legal.html">Click here for legal information.</a>  All rights reserved.</p>
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+</a>
+</p>
+
+<br/>
+<br/>
+<br/>
+
+</div>
+</div>
+</body>
+</html>

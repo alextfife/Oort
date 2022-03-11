@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="demo.manifest"><!--Manifest only works on safari website ios, not the mobile app--> 
+<head>
+<title>Oort</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=10;"/>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<link media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="retina.css" type="text/css" rel="stylesheet"/>
+<link rel="icon" type="image/ico" href="oort.ico"/>	
+<script type="text/javascript" src="Nathan.js">
+</script>
+<script type="text/javascript" src="jqueer.js">
+</script>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta charset="utf-8"/>
+<link rel="apple-touch-startup-image" href="startup.png"/>
+<script>
+
+document.addEventListener("offline", function(){ alert("You are offline. Leaving this page without being connected by WiFi or cellular data will lose this data until you reconnect.") }, false);
+
+var d = new Date();
+var day = d.getDate();
+var month = d.getMonth();
+var year = d.getFullYear();
+var realMonth = month + 1;
+
+
+function loadDate() {
+document.getElementById("day").innerHTML = day;
+document.getElementById("year").innerHTML = year;
+
+if (realMonth == 1) {
+document.getElementById("month").innerHTML= "January ";
+}
+if (realMonth == 2) {
+document.getElementById("month").innerHTML= "February ";
+}
+if (realMonth == 3) {
+document.getElementById("month").innerHTML= "March ";
+}
+if (realMonth == 4) {
+document.getElementById("month").innerHTML= "April ";
+}
+if (realMonth == 5) {
+document.getElementById("month").innerHTML= "May ";
+}
+if (realMonth == 6) {
+document.getElementById("month").innerHTML= "June ";
+}
+if (realMonth == 7) {
+document.getElementById("month").innerHTML= "July ";
+}
+if (realMonth == 8) {
+document.getElementById("month").innerHTML= "August ";
+}
+if (realMonth == 9) {
+document.getElementById("month").innerHTML= "Semptember ";
+}
+if (realMonth == 10) {
+document.getElementById("month").innerHTML= "October ";
+}
+if (realMonth == 11) {
+document.getElementById("month").innerHTML= "November ";
+}
+if (realMonth == 12) {
+document.getElementById("month").innerHTML= "December ";
+}
+}
+
+
+// Mobile Safari in standalone mode
+if(("standalone" in window.navigator) && window.navigator.standalone){
+ 
+	// If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true
+	var noddy, remotes = false;
+	
+	document.addEventListener('click', function(event) {
+		
+		noddy = event.target;
+		
+		// Bubble up until we hit link or top HTML element. Warning: BODY element is not compulsory so better to stop on HTML
+		while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+	        noddy = noddy.parentNode;
+	    }
+		
+		if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+		{
+			event.preventDefault();
+			document.location.href = noddy.href;
+		}
+	
+	},false);
+}
+
+
+
+ 
+var PANEL_SPEED = 650,
+   PANEL_EASING = 'cubic-bezier(0.23,1,0.32,1)'
+ 
+$('#panel_to_slide_out').animate({ 
+  translateX: '-50%', opacity: 1 }, PANEL_SPEED, PANEL_EASING)
+$('#panel_to_slide_in').animate({ 
+  translateX: '0%', opacity: 1 }, PANEL_SPEED, PANEL_EASING)
+
+
+$(window).on('online', online)
+$(window).on('offline', offline)
+
+</script>
+</head>
+
+<body onload="loadDate()">
+
+<div id="wrapper">
+
+
+
+<div id="head">
+<h1 >
+<span id="welcome"><img src="logo.jpg" style="float:left; width:5%; border-radius: 17px;" alt="Oort logo"/>&nbsp Welcome to Oort for NWFSC
+<div id="header"><span>Home</span></div>
+</h1>
+
+<h1 id="secret" style="color:white;"></h1></div></div> <!--<h1 style="font-weight:200;">The date:</span>
+<span id="month"></span>
+<span id="day"></span>,
+<span id="year"></span>.</h1>
+<h1 id="secret"></h1></div>-->
+
+<div id="nav"><div id="footers">
+<a class="nav" href="http://www.oort.webs.com">Home</a> &nbsp &nbsp &nbsp<a class="nav" href="contact.html">Developers </a> &nbsp &nbsp &nbsp<a class="nav" href="mobileapp.html">App</a>
+</div></div>
+
+
+
+<img src="banner.jpg" class="banner" style="width:65%;"/>
+<div id="links">
+
+<h3 id="link-header"><img src="Basic-Download-icon.png" style="width:22px;"/> &nbsp Downloads </h3>
+<ul>
+<li><a href="propermlatemplate.dotx">MLA template ></a></li>
+</ul><hr>
+<h3 id="link-header"><img src="bulb.png" style="width:22px;"/> &nbsp Tips </h3>
+<ul id="assign">
+ <li><a href="http://office.microsoft.com/client/15/help/home?Shownav=true&lcid=1033&ns=OLWAO365E&ver=15&v=15.0.785.0&mode=Desktop&helpid=ms.exch.owao.EmailOnMobilePhone" title="Server is outlook.office365.com" display="block">
+   School email to smartphone >
+ </a></li>
+<li><a href="http://bcs.bedfordstmartins.com/resdoc5e/">MLA help ></li></a>
+</ul>
+<hr>
+<h3 id="link-header"><img src="link.png" style="width:22px;"/> &nbsp Links </h3>
+<ul id="assign">
+
+        <li><a href="http://www.biology-online.org/1/3_respiration.htm" target="_blank">Biology Help ></a></li>
+	
+	<li><a href="https://raidernet.nwfsc.edu/FCCSC/student/email/indexOWCoutside.jsp" target="_blank">Student Email ></a></li>
+
+	<li><a href="https://d2l.nwfsc.edu" target="_blank">D2L ></a></li>
+
+	<li><a href="http://www.teacherease.com" target="_blank">TeacherEase ></a></li>
+
+	<li><a href="https://raidernet.nwfsc.edu/FCCSC/navigate/student2.jsp" target="_blank">RaiderNet ></a></li>
+
+        <li><a href="http://www.turnitin.com" target="_blank">TurnItIn ></a></li>
+
+        <li><a href="http://portal.mypearson.com/mypearson-login.jsp " target="_blank">MyLab (Math, Reading, and Writing) ></a></li> 
+
+ 
+        <li><a href="http://www.aleks.com" target="_blank">ALEKS ></li></a>
+
+        <li><a href="http://bcs.bedfordstmartins.com/resdoc5e/">MLA help ></li></a>
+   
+       
+
+<li><a href="http://lrc.nwfsc.edu/" target="_blank">LRC ></a></li>
+
+<li><a href="http://www.nwfsc.edu" target="_blank">Northwest Florida State College ></a></li>
+</ul> 
+
+</div>
+
+<nav id="top">
+  <ul><hr>
+    <li> <a class="toplink" href="#"><img src="Media-News-icon.png" style="width:22px;"/> &nbsp News </a>
+      <ul>
+        <li><a href="#">The site has been updated to give Collegaite High students a place to find 
+		most links and useful resources. Expect update logs to the site here too.</a></li>
+      
+    
+       <!-- <li><a href="#">Drop Menu 1</a></li>
+      
+    
+        <li><a href="#">Drop Menu 1</a></li>
+      
+    
+        <li><a href="#">Drop Menu 1</a></li>-->
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav id="top">
+  <ul><hr>
+    <li> <a class="toplink" href="#"><img src="cal.png" style="width:22px;"/> &nbsp Calendar 
+	<text style="color:black; text-transform:capitalize;"><br/>It is
+<span id="month" style="color:black;"></span>
+<span id="day" style="color:black;"></span>,
+<span id="year" style="color:black;"></span>.</text></a>
+      <ul>
+        <li><a href="#">First day of school (8/11/14)</a></li>
+      
+    
+        <li><a href="#">WOW week (8/11/14-8/19/14)</a></li>
+      
+    
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav id="top">
+  <ul><hr>
+    <li> <a class="toplink" href="#"><img src="alert.png" style="width:22px;"/> &nbsp Report </a>
+      <ul>
+        <li><a href="#">Report issues and commentary in the Developers page. Thank you!</a></li>
+      
+    
+       <!-- <li><a href="#">Drop Menu 1</a></li>
+      
+    
+        <li><a href="#">Drop Menu 1</a></li>
+      
+    
+        <li><a href="#">Drop Menu 1</a></li>-->
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<nav id="top">
+  <ul><hr>
+    <li> <a class="toplink" href="#"><img src="about.png" style="width:22px;"/> &nbsp About</a>
+      <ul>
+        <li><a href="#">This site is in beta as it is always evolving to better suit the demand for posting necesities during the school day. This page was made by Nathan S. , Thomas A. , and  Alex F.  You'll find links to sites you'll need or find useful for school as well as all the current assignments we are aware of.
+This site was made in Notepad++ using hand-typed XHTML, CSS3, and JavaScript in our free time. We don't make a profit or get compensated for this site at all, 
+so be sure to let us know if you like it.</a></li>
+      
+    
+       <!-- <li><a href="#">Drop Menu 1</a></li>
+      
+    
+        <li><a href="#">Drop Menu 1</a></li>
+      
+    
+        <li><a href="#">Drop Menu 1</a></li>-->
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div id="footer">
+<p style="text-align:center;">Designed by Thomas A, Alex F, and Nathan S.<a href="legal.html">Click here for legal information.</a>  All rights reserved.</p>
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+</a>
+</p>
+
+<br/>
+<br/>
+<br/>
+
+</div>
+<!-- --><script type="text/javascript" src="http://static.websimages.com/static/global/js/webs/usersites/escort.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script></body>
+</html>

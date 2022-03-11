@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>LIGHT SHOW!!!!!</title>
+<script>
+
+
+alert("Press F11 and enjoy the show!");
+function Gradient() {
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(1,900);
+ctx.lineTo(2000,900);
+ctx.lineTo(2000,1);
+R = Math.floor(Math.random()*255);         //These set RGB values so that the shapes made can have different colour gradients 
+G = Math.floor(Math.random()*255);
+B = Math.floor(Math.random()*255);
+X = Math.floor(Math.random()*255);
+C = Math.floor(Math.random()*255);
+V = Math.floor(Math.random()*255);
+Q = Math.floor(Math.random()*255);
+W = Math.floor(Math.random()*255);
+E = Math.floor(Math.random()*255);        //end
+var gradient=ctx.createLinearGradient(0,0,c.width,0);          //add gradient 
+gradient.addColorStop("0","rgb("+X+","+C+","+V+")");
+gradient.addColorStop("0.5","rgb("+R+","+G+","+B+")");
+gradient.addColorStop("1.0","rgb("+Q+","+W+","+E+")");
+// Fill with gradient
+ctx.fillStyle=gradient;                         //  syntax  "rgb("+R+","+G+","+B+")";
+ctx.lineJoin="beval";
+ctx.strokeStyle = "rgb("+R+","+G+","+B+")"
+ctx.stroke();
+ctx.fill();
+ctx.beginPath();
+var t=setTimeout(function(){Gradient()},100);
+}
+</script>
+<style type="text/css">
+body {
+background-color:black;
+}
+</style>
+</head>
+<body onload="Gradient()">
+
+<canvas id="myCanvas" width="1366" height="768" style="border:1px solid black">
+
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+</body>
+</html>

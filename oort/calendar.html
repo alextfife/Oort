@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+ function add(i){
+localStorage.setItem("text"+i,prompt("What would you like to add?"));
+ document.getElementById('box'+i).innerHTML = localStorage.getItem('text'+i); 
+ } 
+
+
+
+ function start() {
+ for (var i = 1; i < 30; i++) { document.getElementById('box'+i).innerHTML = localStorage.getItem('text'+i); }
+}
+</script>
+<link href="calendar.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=10;">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="retina.css" type="text/css" rel="stylesheet">	
+<script src="Nathan.js">
+</script>
+<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="apple-touch-startup-image" href="startup.png">
+
+<title>Calendar</title>
+</head>
+<body onload="start()">
+<div id="menu"><h1>Calendar</h1></div>
+<div class="move"><div id="nav"><div id="footers">
+<a class="nav" href="index.html">Home</a> &nbsp &nbsp &nbsp<a class="nav" href="events.html">Events</a>&nbsp &nbsp &nbsp<a class="nav" href="about.html">About</a> &nbsp &nbsp &nbsp<a class="nav" href="contact.html">Contact Us</a>
+</div></div></div>
+<h1>September 2013</h1>
+<table id="calendar">
+    <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+    <tr>
+    	<td class="empty"></td>
+       <td class="empty"></td>
+       <td class="empty"></td>
+       <td class="empty"></td>
+        <td class="empty"></td>
+        <td class="empty"></td>
+        <td class="empty"></td>      
+    </tr>
+    <tr>
+    	<td>
+			<span>1</span>
+			<button onclick="add(1)">Add</button>
+			<p id="box1"></p>
+		</td>
+        <td>
+			<span>2</span>
+			<button onclick="add(2)">Add</button>
+			<p id="box2"></p>
+		</td>
+        <td>
+			<span>3</span>
+				<button onclick="add(3)">Add</button>
+			<p id="box3"></p>
+		</td>
+        <td>
+			<span>4</span>
+			<button onclick="add(4)">Add</button>
+			<p id="box4"></p>
+		</td>
+        <td>
+        	<span>5</span>
+			<button onclick="add(5)">Add</button>
+			<p id="box5"></p>
+        	
+        </td>
+        <td>
+			<span>6</span>
+			<button onclick="add(6)">Add</button>
+			<p id="box6"></p>
+        	
+			
+		</td>
+        <td>
+			<span>7</span>
+			<button onclick="add(7)">Add</button>
+			<p id="box7"></p>
+		</td>        
+    </tr>
+    <tr>
+		<td>
+			<span>8</span>
+			<button onclick="add(8)">Add</button>
+			<p id="box8"></p>
+		</td>
+        <td>
+			<span>9</span>
+			<button onclick="add(9)">Add</button>
+			<p id="box9"></p>
+		</td>
+        <td>
+			<span>10</span>
+			<button onclick="add(10)">Add</button>
+			<p id="box10"></p>
+		</td>
+        <td>
+			<span>11</span>
+			<button onclick="add(11)">Add</button>
+			<p id="box11"></p>
+		</td>
+        <td>
+			<span>12</span>
+			<button onclick="add(12)">Add</button>
+			<p id="box12"></p>
+		</td>
+        <td>
+			<span>13</span>
+			<button onclick="add(13)">Add</button>
+			<p id="box13"></p>
+		</td>
+		<td>
+			<span>14</span>
+			<button onclick="add(14)">Add</button>
+			<p id="box14"></p>
+		</td>
+    </tr>
+    <tr>
+    	<td>
+			<span>15</span>
+			<button onclick="add(15)">Add</button>
+			<p id="box15"></p>
+		</td>
+        <td>
+			<span>16</span>
+			<button onclick="add(16)">Add</button>
+			<p id="box16"></p>
+		</td>
+        <td>
+			<span>17</span>
+			<button onclick="add(17)">Add</button>
+			<p id="box17"></p>
+		</td>
+        <td>
+        	<span>18</span>
+			<button onclick="add(18)">Add</button>
+			<p id="box18"></p>
+           
+        </td>
+        <td>
+        	<span>19</span>
+			<button onclick="add(19)">Add</button>
+			<p id="box19"></p>
+        </td>
+        <td>
+        	<span>20</span>
+			<button onclick="add(20)">Add</button>
+			<p id="box20"></p>
+           
+        </td>
+        <td>
+			<span>21</span>
+			<button onclick="add(21)">Add</button>
+			<p id="box21"></p>
+		</td>        
+    </tr>
+    <tr>
+    	<td>
+			<span>22</span>
+			<button onclick="add(22)">Add</button>
+			<p id="box22"></p>
+		</td>  
+        <td>
+			<span>23</span>
+			<button onclick="add(23)">Add</button>
+			<p id="box23"></p>
+		</td>
+        <td>
+			<span>24</span>
+			<button onclick="add(24)">Add</button>
+			<p id="box24"></p>
+		</td>
+        <td>
+			<span>25</span>
+			<button onclick="add(25)">Add</button>
+			<p id="box25"></p>
+		</td>
+      <td>
+			<span>26</span>
+			<button onclick="add(26)">Add</button>
+			<p id="box26"></p>
+		</td>
+       <td>
+			<span>27</span>
+			<button onclick="add(27)">Add</button>
+			<p id="box27"></p>
+		</td>
+        <td>
+			<span>28</span>
+			<button onclick="add(28)">Add</button>
+			<p id="box28"></p>
+		</td>
+    </tr>
+	<tr>
+		<td>
+			<span>29</span>
+			<button onclick="add(29)">Add</button>
+			<p id="box29"></p>
+		</td>
+		<td>
+			<span>30</span>
+			<button onclick="add(30)">Add</button>
+			<p id="box30"></p>
+		</td>
+		<td class="empty"></td>
+		<td class="empty"></td>
+		<td class="empty"></td>
+		<td class="empty"></td>
+		<td class="empty"></td>
+	</tr>
+</table>
+</body>
+</html>

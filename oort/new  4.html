@@ -1,0 +1,71 @@
+<!--HTML sweg-->
+<head>
+<style>
+/*CSS*/
+#menubar {
+    width:100%;
+    background-color:#444;
+    color: #fff;
+}
+#menu, #right {
+    display:inline;
+}
+#right {
+    width:500px;
+    background-color: #fff;
+    z-index: 5;
+    position: fixed;
+    left: 0px;
+    height: 100%;
+    background-color:grey;
+}
+#menu {
+    float:left;
+    width: 100px;
+    height: 100%;
+}
+#menu li {
+    background-color:black;
+    border-bottom: 1px solid #000;
+    color:white;
+}
+#swag {background-color:red;
+    color:blue;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+//javescripy
+$('#button').toggle( 
+    function() {
+        $('#right').animate({ left: 100 }, 'fast', function() {
+            $('#button').html('Close');
+        });
+    }, 
+    function() {
+        $('#right').animate({ left: 0 }, 'fast', function() {
+            $('#button').html('Menu');
+        });
+    }
+);
+</script>
+</head>
+    <div id="menu">
+        <ul>
+            <li>Menu Item 1</li>
+            <li>Menu Item 2</li>
+        </ul>
+    </div>
+    <div id="right">
+        <div id="menubar">
+            <div id="button">
+                Menu
+            </div>
+        </div>
+        <p>dont be a fag</p>
+        <marquee>LOLOLOLOLOL</marquee>
+        <div id="swag">
+            <p>Poop in the toilet, save the urine for the urinal!</p>
+        </div>
+    </div>
+            
